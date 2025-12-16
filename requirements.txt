@@ -1,2 +1,2 @@
-# Add runtime or dev dependencies here, e.g.:
-pytest
+Flask==3.0.3
+pytest==8.3.4

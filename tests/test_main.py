@@ -1,7 +1,17 @@
-from main import main
+from main import create_app
 
 
-def test_main(capsys):
-    main()
-    captured = capsys.readouterr()
-    assert "Hello from python_project" in captured.out
+def test_index_route():
+    app = create_app()
+    client = app.test_client()
+    resp = client.get("/")
+    assert resp.status_code == 200
+    assert b"Deaf Assistant" in resp.data
+
+
+def test_health_route():
+    app = create_app()
+    client = app.test_client()
+    resp = client.get("/health")
+    assert resp.status_code == 200
+    assert resp.json == {"status": "ok"}

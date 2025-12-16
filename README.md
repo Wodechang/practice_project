@@ -1,31 +1,49 @@
-# python_project
+# Deaf Assistant (Local Live Captions)
 
-Minimal Python project skeleton.
+A lightweight, professional **local-host web app** that turns **spoken words (microphone audio)** into **large on-screen text** for deaf/hard-of-hearing users.
 
-Quick start:
+## Requirements
 
-1. Create a virtual environment:
+- Python 3.10+
+- A browser with Web Speech API support (recommended: Chrome or Microsoft Edge)
+
+## Run locally (localhost)
+
+1. Create + activate a virtual environment:
 
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
    ```
 
-2. Install dev deps (optional):
+2. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the app:
+3. Start the server:
 
    ```bash
    python main.py
    ```
 
-4. Run tests:
+4. Open the app:
 
-   ```bash
-   pip install pytest
-   pytest
-   ```
+- `http://127.0.0.1:5000/`
+
+Press **Start** and allow microphone permissions.
+
+## Configuration
+
+You can override host/port with environment variables:
+
+```bash
+HOST=0.0.0.0 PORT=5000 DEBUG=1 python main.py
+```
+
+## Tests
+
+```bash
+pytest
+```

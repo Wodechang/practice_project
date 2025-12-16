@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deaf Assistant — Live Captions</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div class="brand__title">Deaf Assistant</div>
+        <div class="brand__subtitle">Live captions on your screen</div>
+      </div>
+
+      <div class="controls">
+        <button id="btnStart" class="btn btn--primary" type="button">Start</button>
+        <button id="btnStop" class="btn btn--secondary" type="button" disabled>Stop</button>
+        <button id="btnClear" class="btn btn--ghost" type="button">Clear</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <div class="panel__meta">
+          <div class="status" id="status">Idle</div>
+          <div class="hint" id="hint">
+            Tip: use Chrome/Edge and allow microphone access.
+          </div>
+        </div>
+
+        <div class="caption" aria-live="polite" aria-atomic="false">
+          <div class="caption__final" id="finalText">Press Start to begin live captions.</div>
+          <div class="caption__interim" id="interimText"></div>
+        </div>
+      </section>
+
+      <section class="footer">
+        <div class="footer__note">
+          Privacy: speech recognition runs in your browser via the Web Speech API.
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+
