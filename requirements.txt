@@ -1,2 +1,12 @@
-# Add runtime or dev dependencies here, e.g.:
+# Data and plotting
+pandas
+matplotlib
+
+# Machine learning
+scikit-learn
+
+# Notebooks
+jupyter
+
+# Testing
 pytest

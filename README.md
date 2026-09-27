@@ -1,31 +1,27 @@
-# python_project
+# practice_project
 
-Minimal Python project skeleton.
+Practice repository for Python, algorithms, and machine learning.
 
-Quick start:
+## Contents
 
-1. Create a virtual environment:
+| Folder | What's in it |
+|--------|--------------|
+| [`leetcode_solutions/`](leetcode_solutions/) | Python solutions to LeetCode problems |
+| [`machine_learning_projects/`](machine_learning_projects/) | Jupyter notebooks and their datasets |
 
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
+## Setup
 
-2. Install dev deps (optional):
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Running the notebooks
 
-3. Run the app:
+```bash
+jupyter notebook machine_learning_projects/
+```
 
-   ```bash
-   python main.py
-   ```
-
-4. Run tests:
-
-   ```bash
-   pip install pytest
-   pytest
-   ```
+Datasets live in `machine_learning_projects/data/`, so notebooks load them
+with relative paths and work no matter where the repo is cloned.
